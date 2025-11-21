@@ -5,8 +5,8 @@
 </head>
 <body>
 
-<form action="https://athiphat-mybackend-01.southeastasia.cloudapp.azure.com/api/product" 
-      method="POST" 
+<form action="https://athiphat-mybackend-01.southeastasia.cloudapp.azure.com/api/product"
+      method="POST"
       enctype="multipart/form-data">
 
     <fieldset>
@@ -18,8 +18,8 @@
         </p>
 
         <p>
-            <label for="itemDescription">Item Description</label><br>
-            <textarea id="itemDescription" name="itemDescription" rows="5" cols="50"></textarea>
+            <label for="itemDescription">Description</label><br>
+            <textarea id="itemDescription" name="itemDescription" rows="5" cols="60"></textarea>
         </p>
 
         <p>
@@ -52,25 +52,38 @@
             <input type="number" id="listPrice" name="listPrice" min="0" step="0.01">
         </p>
 
-        <p>Available Store:</p>
-        <input type="checkbox" name="availableStore[]" value="Bangkok"> Bangkok<br>
-        <input type="checkbox" name="availableStore[]" value="Pattaya"> Pattaya<br>
-        <input type="checkbox" name="availableStore[]" value="Phuket"> Phuket<br>
-
-        <p>Status:</p>
-        <input type="radio" name="status" value="Active"> Active<br>
-        <input type="radio" name="status" value="Inactive"> Inactive<br>
-
+        <p>Available Stores</p>
         <p>
-            <label for="staffEmail">Staff Email</label><br>
-            <input type="email" id="staffEmail" name="staffEmail" required>
+            <input type="checkbox" id="store-bkk" name="availableStore[]" value="Bangkok">
+            <label for="store-bkk">Bangkok</label>
+
+            <input type="checkbox" id="store-pat" name="availableStore[]" value="Pattaya">
+            <label for="store-pat">Pattaya</label>
+
+            <input type="checkbox" id="store-phu" name="availableStore[]" value="Phuket">
+            <label for="store-phu">Phuket</label>
+        </p>
+
+        <p>Active Status</p>
+        <p>
+            <input type="radio" id="status-active" name="status" value="Active">
+            <label for="status-active">Active</label>
+
+            <input type="radio" id="status-inactive" name="status" value="Inactive">
+            <label for="status-inactive">Inactive</label>
         </p>
     </fieldset>
 
-    <!-- Submit -->
     <fieldset>
-        <button type="submit">Submit Form</button>
+        <legend>Staff</legend>
+
+        <p>
+            <label for="staffEmail">Staff Email</label><br>
+            <input type="email" id="staffEmail" name="staffEmail" size="50" required>
+        </p>
     </fieldset>
+
+    <button type="submit">Submit Form</button>
 
 </form>
 
