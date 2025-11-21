@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Array - Filter</title>
+</head>
+<body>
+
+    <h2>JavaScript Array - Filter Output</h2>
+    <p>Open the console to see the result (Right click → Inspect → Console)</p>
+
+    <script>
+        const people = [
+            "Alice Anderson",
+            "Aaron Adams",
+            "Bella Brown",
+            "Brian Black",
+            "Cathy Carter",
+            "Charles Cooper",
+            "Diana Davis",
+            "Daniel Drake",
+            "Ella Evans",
+            "Ethan Edwards",
+            "Fiona Fisher",
+            "Frank Foster",
+            "Grace Green",
+            "Gavin Gray",
+            "Hannah Harris",
+            "Henry Hill",
+            "Isabella Ingram",
+            "Ian Irving",
+            "Jack Johnson",
+            "Julia James"
+        ];
+
+        const letter = "B";
+
+        const result = people.filter((name) => {
+            return name.charAt(0) === letter;
+        });
+
+        console.log("Filtered names:");
+        console.log(result);
+    </script>
+
+</body>
+</html>
